@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        <!--This colors are the for setting the background and foreground of the app-->
+        <color name="app_window_background_color">#121212</color>
+        <color name="app_window_over_color">#1E1E1E</color>
+
+        <!--    This colors are for radio buttons-->
+        <color name="radioButtonCheckColor">#f0f0f0</color>
+
+        <!--    This colors for Team Title and Team Runs-->
+        <color name="titleTextColor">#eeedf0</color>
+        <color name="teamRunsColor">#f0f0f0</color>
+
+
+
+</resources>

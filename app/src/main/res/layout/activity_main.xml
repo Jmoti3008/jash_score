@@ -4,15 +4,191 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_window_background_color"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
+    <!--    This is Team One Card-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/teamOneCard"
+        style="@style/TeamCardStyle"
+        app:layout_constraintBottom_toTopOf="@id/teamTwoCard"
+        app:layout_constraintEnd_toStartOf="@id/radioBtnCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/radioBtnCard"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <!--        Team One Card child Constraint Layout for laying out the views-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/teamOneImage"
+                style="@style/TeamImageStyle"
+                android:src="@drawable/csk"
+                app:layout_constraintBottom_toBottomOf="@id/teamOneTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/teamOneTitle"
+                app:roundPercent="1" />
+
+            <TextView
+                android:id="@+id/teamOneTitle"
+                style="@style/TeamTitleStyle"
+                android:fontFamily="@font/roboto"
+                android:text="@string/csk"
+                app:layout_constraintStart_toEndOf="@id/teamOneImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/teamOneScore"
+                style="@style/TeamScoreStyle"
+                android:text="@string/_0_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamOneTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!--    This is Team One Card-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/teamTwoCard"
+        style="@style/TeamCardStyle"
+        app:layout_constraintBottom_toBottomOf="@id/radioBtnCard"
+        app:layout_constraintEnd_toStartOf="@id/radioBtnCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teamOneCard">
+
+        <!--        Team Two Card child Constraint Layout for laying out the views-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/teamTwoImage"
+                style="@style/TeamImageStyle"
+                android:src="@drawable/gt"
+                app:layout_constraintBottom_toBottomOf="@id/teamTwoTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/teamTwoTitle"
+                app:roundPercent="1" />
+
+            <TextView
+                android:id="@+id/teamTwoTitle"
+                style="@style/TeamTitleStyle"
+                android:text="@string/gt"
+                app:layout_constraintStart_toEndOf="@id/teamTwoImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/teamTwoScore"
+                style="@style/TeamScoreStyle"
+                android:text="@string/_0_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamTwoTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--    This is Scoring Options Card-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/radioBtnCard"
+        style="@style/RadioButtonCardStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        This is Scoring Ooptions Radio Group-->
+        <RadioGroup
+            android:id="@+id/ScoringOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <RadioButton
+                android:id="@+id/ScoreOne"
+                style="@style/RadioButtonStyle"
+                android:checked="true"
+                android:drawableEnd="@drawable/run_one_24dp" />
+
+            <RadioButton
+                android:id="@+id/ScoreTwo"
+                style="@style/RadioButtonStyle"
+                android:drawableEnd="@drawable/run_two_24dp" />
+
+            <RadioButton
+                android:id="@+id/ScoreThree"
+                style="@style/RadioButtonStyle"
+                android:drawableEnd="@drawable/run_three_24dp" />
+
+            <RadioButton
+                android:id="@+id/ScoreFour"
+                style="@style/RadioButtonStyle"
+                android:drawableEnd="@drawable/run_four_24dp" />
+
+            <RadioButton
+                android:id="@+id/ScoreFive"
+                style="@style/RadioButtonStyle"
+                android:drawableEnd="@drawable/run_six_24dp" />
+
+            <RadioButton
+                android:id="@+id/Wicket"
+                style="@style/RadioButtonStyle.RadioButtonWicket"
+                android:drawableEnd="@drawable/wicket_24dp" />
+
+        </RadioGroup>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--    Game Info - whether it is started or not-->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/matchInfo"
+        style="@style/GameInfoStyle"
+        android:text="@string/game_start"
+        app:layout_constraintBottom_toTopOf="@id/btnIncrease"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    Button for increasing the Score Value for any of the team-->
+    <Button
+        android:id="@+id/btnDecrease"
+        style="@style/ButtonStyle.DecreaseButton"
+        android:text="@string/decrease"
+        app:layout_constraintBottom_toTopOf="@id/btnNewGame"
+        app:layout_constraintEnd_toStartOf="@id/btnIncrease"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    Button for decreasing the Score Value for any of the team-->
+    <Button
+        android:id="@+id/btnIncrease"
+        style="@style/ButtonStyle.IncreaseButton"
+        android:text="@string/increase"
+        app:layout_constraintBottom_toTopOf="@id/btnNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnDecrease" />
+
+    <!--    Button for starting the new game-->
+    <Button
+        android:id="@+id/btnNewGame"
+        style="@style/ButtonStyle.NewGameButton"
+        android:text="@string/new_game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

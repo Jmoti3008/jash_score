@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">jash_score</string>
+    <string name="app_name">ScoreKeeper by Jash</string>
+    <string name="game_start">Select the card of any team to start the game</string>
+    <string name="game_started">Match Started</string>
+    <string name="decrease">- Decrease</string>
+    <string name="increase">+ Increase</string>
+    <string name="new_game">New Game</string>
+    <string name="csk">CSK</string>
+    <string name="_0_0">0/0</string>
+    <string name="gt">GT</string>
 </resources>

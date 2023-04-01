@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    This are the DEFAULT COLORS-->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +8,23 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--This colors are the for setting the background and foreground of the app-->
+    <color name="app_window_background_color">#eeedf0</color>
+    <color name="app_window_over_color">#f0f0f0</color>
+
+    <!--    This colors are for radio buttons-->
+    <color name="radioButtonWicket">#E6584E</color>
+    <color name="radioButtonCheckColor">#1E1E1E</color>
+
+    <!--    This colors for Team Title and Team Runs-->
+    <color name="titleTextColor">#1E1E1E</color>
+    <color name="teamRunsColor">#121212</color>
+
+    <!--This colors are for the buttons-->
+    <!--    i.e. INCREASE, DECREASE, NEW GAME-->
+    <color name="green_button">#81C784</color>
+    <color name="red_button">#E57373</color>
+    <color name="new_game_button">#004D40</color>
+
 </resources>
